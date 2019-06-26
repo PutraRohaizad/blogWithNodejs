@@ -1,0 +1,22 @@
+<%- include('../layout/header') %>
+
+<div class="container mt-5">
+
+    <h2>Create new post</h2>
+
+    <form action ="/post" method="POST">
+        <div class="form-group">
+            <label>  title </label>
+            <input type="text" class="form-control" name="title"> 
+        </div>
+        <div class="form-group">
+                <label> body </label>
+                <textarea class="form-control" name="body"></textarea>
+         </div>
+        
+         <button class="btn btn-primary" type="submit">Post</button>
+    </form>
+
+
+</div>
+<%- include('../layout/footer') %>

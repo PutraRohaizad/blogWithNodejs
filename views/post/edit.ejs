@@ -1,0 +1,22 @@
+<%- include('../layout/header') %>
+
+<div class="container mt-5">
+
+    <h2>Edit post</h2>
+
+    <form action ="/post/<%= post.get('id') %>/edit" method="POST">
+        <div class="form-group">
+            <label>  title </label>
+            <input type="text" class="form-control" name="title" value="<%= post.get('title')%>"> 
+        </div>
+        <div class="form-group">
+                <label> body </label>
+        <textarea class="form-control" name="body"><%= post.get('body')%></textarea>
+         </div>
+        
+         <button class="btn btn-success" type="submit">Save</button>
+    </form>
+
+
+</div>
+<%- include('../layout/footer') %>

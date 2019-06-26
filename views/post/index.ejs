@@ -1,0 +1,27 @@
+<%- include('../layout/header') %>
+
+<div class="container mt-5">
+  <h1>Post</h1>
+  <div class="btn btn-success mb-3">
+    <a href="/post/create" style="color:white;" class="m-3"> Create New</a>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <th>Title</th>
+      <th>Created At</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <% posts.forEach(post => { %>
+        <tr>
+            <td><%= post.get('title') %> </td>
+            <td><%= post.get('created_at') %></td>
+            <td><a href="/post/<%= post.get('id') %> ">Show</a></td>
+          </tr>
+      <% }) %>
+      
+    </tbody>
+  </table>
+</div>
+
+<%- include('../layout/footer') %>
